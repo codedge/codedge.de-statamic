@@ -1,0 +1,37 @@
+<div class="container mx-auto mt-8 p-6 bg-white">
+    <h1 class="text-4xl font-bold"> 
+        {{ title }}
+    </h1>
+
+    <ul class="divide-y divide-gray-200">
+        {{ collection:posts limit="5" sort="date:desc"}}
+            <li class="py-12">
+                <article class="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
+                    <dl>
+                        <dt class="sr-only">Published on</dt>
+                        <dd class="text-base leading-6 font-medium text-gray-500">
+                            <time datetime="{{ date }}">{{ date }}</time>
+                        </dd>
+                    </dl>
+                    <div class="space-y-5 xl:col-span-3">
+                        <div class="space-y-6">
+                            <h2 class="text-2xl leading-8 font-bold tracking-tight">
+                                <a href="/posts/{{ slug }}" class="text-gray-800 no-shadow">
+                                    {{ title }}
+                                </a>
+                            </h2>
+                            <div class="prose max-w-none text-gray-500">
+                                
+                            </div>
+                        </div>
+                        <div class="text-base leading-6 font-medium">
+                            <a class="text-orange-500 hover:text-orange-600 no-shadow" aria-label="Read &quot;{{ title }}&quot;" href="/posts/{{ slug }}">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </li>
+        {{ /collection:posts }}
+    </ul>
+</div>

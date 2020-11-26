@@ -1,0 +1,146 @@
+title: Posts
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: post_content
+        field:
+          always_show_set_button: true
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - underline
+            - strikethrough
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+            - code
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: true
+          fullscreen: true
+          allow_source: true
+          display: Content
+          type: bard
+          icon: bard
+          listable: hidden
+          sets:
+            code:
+              display: Code
+              fields:
+                -
+                  handle: code
+                  field:
+                    theme: material
+                    mode: htmlmixed
+                    indent_type: tabs
+                    indent_size: 4
+                    key_map: default
+                    line_numbers: true
+                    line_wrapping: true
+                    display: Code
+                    type: markdown_highlight
+                    icon: code
+                    listable: hidden
+                    restrict: false
+                    automatic_line_breaks: true
+                    automatic_links: true
+                    escape_markup: false
+                    smartypants: false
+                    antlers: false
+            image:
+              display: Image
+              fields:
+                -
+                  handle: image
+                  field:
+                    mode: grid
+                    restrict: false
+                    allow_uploads: true
+                    display: Image
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    container: assets
+            video:
+              display: Video
+              fields:
+                -
+                  handle: video
+                  field:
+                    display: Video
+                    type: video
+                    icon: video
+                    listable: hidden
+            hint:
+              display: Hint
+              fields:
+                -
+                  handle: hint
+                  field:
+                    always_show_set_button: false
+                    buttons:
+                      - bold
+                      - italic
+                      - anchor
+                    save_html: false
+                    toolbar_mode: fixed
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    reading_time: false
+                    fullscreen: false
+                    allow_source: true
+                    display: Hint
+                    type: bard
+                    icon: bard
+                    listable: hidden
+      -
+        handle: author
+        field:
+          type: users
+          display: Author
+          default: current
+          localizable: true
+          max_items: 1
+      -
+        handle: template
+        field:
+          type: template
+          display: Template
+          localizable: true
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+      -
+        handle: date
+        field:
+          type: date
+          required: true
+          validate:
+            - required
