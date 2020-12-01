@@ -1,6 +1,7 @@
 /node_modules
 /public/js
 /public/hot
+/public/sitemap.xml
 /public/storage
 /public/vendor/statamic
 /storage/*.key
