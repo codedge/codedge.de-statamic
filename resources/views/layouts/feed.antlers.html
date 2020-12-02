@@ -1,0 +1,26 @@
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://www.codedge.de/feed</id>
+    <link href="https://www.codedge.de/feed" rel="self"></link>
+    <title><![CDATA[Web development | codedge]]></title>
+    {{ collection from="posts" limit="1" }}
+    <updated>{{ date format="c" }}</updated>
+    {{ /collection }}
+    {{ collection from="posts" }}
+    <entry>
+        <title><![CDATA[{{ title }}]]></title>
+        <link rel="alternate" href="https://www.codedge.de{{ url }}" />
+        <id>https://www.codedge.de{{ url }}</id>
+        <author>
+            <name><![CDATA[Holger Lösken]]></name>
+        </author>
+        <summary type="html">
+            <![CDATA[{{ contents }}
+            {{ if type == 'header' }}
+            {{ header }}{{ text }}{{ /header }}
+            {{ /if }}
+            {{ /contents }}]]>
+        </summary>
+        <updated>{{ date format="c" }}</updated>
+    </entry>
+    {{ /collection }}
+</feed>
