@@ -1,7 +1,6 @@
 {
     "name": "statamic/statamic",
     "description": "Statamic",
-    "keywords": ["statamic", "cms", "flat file", "laravel"],
     "type": "project",
     "require": {
         "php": "^7.3",

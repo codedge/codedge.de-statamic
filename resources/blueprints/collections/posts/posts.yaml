@@ -17,6 +17,8 @@ sections:
           buttons:
             - h2
             - h3
+            - h4
+            - h5
             - bold
             - italic
             - underline
@@ -114,6 +116,7 @@ sections:
                       - italic
                       - unorderedlist
                       - anchor
+                      - code
                     save_html: false
                     toolbar_mode: fixed
                     link_noopener: false
@@ -121,7 +124,7 @@ sections:
                     target_blank: false
                     reading_time: false
                     fullscreen: false
-                    allow_source: true
+                    allow_source: false
                     display: Hint
                     type: bard
                     icon: bard
