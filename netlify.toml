@@ -24,3 +24,12 @@ PHP_VERSION="7.4"
   for = "js/site.js"
   [headers.values]
     Cache-Control = "max-age=31536000"
+
+[[plugins]]
+  package = "netlify-plugin-checklinks"
+
+[[plugins]]
+  package = "netlify-plugin-no-more-404"
+
+[plugins.inputs]
+  cacheKey = "codedge-statamic-blog"
