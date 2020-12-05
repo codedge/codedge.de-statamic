@@ -5,7 +5,7 @@
         "headers": [
           {
             "key": "Content-Type",
-            "value": "application/rss+xml"
+            "value": "application/atom+xml"
           }
         ]
       },
