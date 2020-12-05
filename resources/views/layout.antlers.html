@@ -12,6 +12,9 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <title>{{ seotamic:title }}</title>
         <link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}">
+        {{ if environment === 'production' }}
+        <script src="https://4ke5b4ila.codedge.de/script.js" data-site="NAZGCKUR" defer></script>
+        {{ /if }}
         
         {{ seotamic:og }}
         {{ seotamic:twitter }}
