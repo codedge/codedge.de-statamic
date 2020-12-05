@@ -26,10 +26,29 @@
         {{ if environment === 'production' }}
         <script src="https://4ke5b4ila.codedge.de/script.js" data-site="NAZGCKUR" defer></script>
         {{ /if }}
+        <script type='application/ld+json'>
+        {
+            "@context":"http:\/\/schema.org",
+            "@type":"WebSite",
+            "@id":"#website",
+            "url":"https:\/\/www.codedge.de\/",
+            "name":"www.codedge.de"
+        }
+        </script>
+        <script type='application/ld+json'>
+        {
+            "@context":"http:\/\/schema.org",
+            "@type":"Person",
+            "sameAs":["https:\/\/twitter.com\/cod2edge"],
+            "@id":"#person",
+            "name":"Holger Lösken"
+        }
+        </script>
         
         {{ tags }}
         <meta property="article:tag" content="{{ value }}"/>
         {{ /tags }}
+        <meta property="article:published_time" content="{{ date format="Y-m-d\TH:i:sO" }}"/>
         {{ seotamic:og }}
         {{ seotamic:twitter }}
     </head>
