@@ -8,20 +8,20 @@
     </div>
 
 
-    <article itemscope itemtype=http://schema.org/BlogPosting>
+    <article class="h-card" itemscope itemtype=http://schema.org/BlogPosting>
         <div class="prose max-w-none mt-10 mb-8 text-center">
-            <h1 itemprop="headline"> 
+            <h1 class="p-name" itemprop="headline"> 
                 {{ title }}
             </h1>
-            <time class="text-base font-normal" datetime="{{ date format="Y-m-d" }}">
+            <time class="text-base font-normal dt-published" datetime="{{ date format="Y-m-d" }}">
                 {{ date }}
             </time> |
             <div class="inline" itemscope itemtype="http://schema.org/Person">
-                <span itemprop="author">Holger Lösken</span>
+                <span class="p-author h-card" itemprop="author">Holger Lösken</span>
             </div>
         </div>
 
-        <div itemprop="articleBody">
+        <div class="e-content" itemprop="articleBody">
             {{ post_content }}
                 {{ partial src="sets/{type}" }}
             {{ /post_content }}
