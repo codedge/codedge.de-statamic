@@ -161,6 +161,13 @@ sections:
           required: true
           validate:
             - required
+      -
+        handle: tags
+        field:
+          display: Tags
+          type: taggable
+          icon: tags
+          listable: hidden
   SEO:
     display: SEO
     fields:
