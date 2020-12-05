@@ -33,7 +33,7 @@ sections:
             - code
           save_html: false
           toolbar_mode: fixed
-          link_noopener: false
+          link_noopener: true
           link_noreferrer: false
           target_blank: false
           reading_time: true
