@@ -2,8 +2,16 @@
 title: About
 author: dae50ec2-e88c-43d0-a926-8d2aaac5ee58
 updated_by: dae50ec2-e88c-43d0-a926-8d2aaac5ee58
-updated_at: 1606234985
+updated_at: 1607127257
 template: default
+seotamic_title: title
+seotamic_title_prepend: true
+seotamic_title_append: true
+seotamic_meta_description: general
+seotamic_open_graph_title: title
+seotamic_open_graph_description: general
+seotamic_twitter_title: title
+seotamic_twitter_description: general
 id: 4c9e5561-8eee-4175-9e83-28702b4ef4a4
 ---
 Hi! I'm Holger. I code thingies for the web. I try to help people with code.  
