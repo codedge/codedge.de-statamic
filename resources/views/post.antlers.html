@@ -8,18 +8,25 @@
     </div>
 
 
-    <div class="prose max-w-none mt-10 mb-8 text-center">
-        <h1> 
-            {{ title }}
-        </h1>
-        <small class="text-base font-normal">
-            {{ date }}
-        </small>
-    </div>
-    
-    {{ post_content }}
-        {{ partial src="sets/{type}" }}
-    {{ /post_content }}
+    <article itemscope itemtype=http://schema.org/BlogPosting>
+        <div class="prose max-w-none mt-10 mb-8 text-center">
+            <h1 itemprop="headline"> 
+                {{ title }}
+            </h1>
+            <time class="text-base font-normal" datetime="{{ date format="Y-m-d" }}">
+                {{ date }}
+            </time> |
+            <div class="inline" itemscope itemtype="http://schema.org/Person">
+                <span itemprop="author">Holger Lösken</span>
+            </div>
+        </div>
+
+        <div itemprop="articleBody">
+            {{ post_content }}
+                {{ partial src="sets/{type}" }}
+            {{ /post_content }}
+        </div>
+    </article>
 
     {{ partial:_webmentions }}
 </div>
