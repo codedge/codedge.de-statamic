@@ -3,13 +3,13 @@ title_prepend: null
 title_append: '| docutize'
 section_description: null
 meta_description: 'Software, especially web development for ecommerce, fashion, and other branches. A personal portfolio of Holger Lösken.'
-social_image: null
+social_image: logo-e-300x300.png
 section_og: null
 open_graph_display: true
 open_graph_site_name: codedge
 open_graph_title: null
 open_graph_description: null
 section_twitter: null
-twitter_display: false
+twitter_display: true
 twitter_title: null
 twitter_description: null
