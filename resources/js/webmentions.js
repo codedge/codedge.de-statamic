@@ -1,81 +1,36 @@
-const container = document.querySelector("[data-webmentions]");
+const dayjs = require("dayjs");
 
-if (container) {
-    fetch(`https://webmention.io/api/mentions.jf2?target=${container.dataset.webmentions}`)
+const wmContainer = document.querySelector("[data-webmentions]");
+const outerContainer = wmContainer.parentElement;
+
+if (wmContainer) {
+    fetch(`https://webmention.io/api/mentions.jf2?target=${wmContainer.dataset.webmentions}`)
         .then(response => {
             response.json().then(data => {
-                let webmentions = {
-                    likes: [],
-                    retweets: [],
-                };
-
-                data.children.forEach(doc => {
-                    switch (doc['wm-property']) {
-                        case 'like-of':
-                            return webmentions.likes.push(doc);
-                        case 'repost-of':
-                            return webmentions.retweets.push(doc);
-                        default:
-                            return;
-                    }
-                });
-
-                renderWebmentions(container, webmentions);
+                if (data.children.length > 0) {
+                    renderWebmentions(data.children);
+                }
             });
-        });
-}
-
-function renderWebmentions(container, webmentions) {
-    container.innerHTML = "";
-
-    if (webmentions.likes.length === 0 && webmentions.retweets.length === 0) {
-        return;
-    }
-
-    container.innerHTML = '<h3 class="text-2xl">Webmentions</h3>';
-
-    if (webmentions.likes.length > 0) {
-        container.appendChild(renderAvatarList(webmentions.likes.length > 1 ? 'likes' : 'like', webmentions.likes));
-    }
-
-    if (webmentions.retweets.length > 0) {
-        container.appendChild(renderAvatarList(webmentions.retweets.length > 1 ? 'retweets' : 'retweet', webmentions.retweets));
-    }
-}
-
-function renderAvatarList(label, webmentions) {
-    const list = document.createElement("ul");
-    list.className = "pb-6 sm:pb-12 text-left flex";
-
-    const count = document.createElement('div');
-    count.innerHTML = webmentions.length + "&nbsp;" + label;
-    count.className = 'flex-no-shrink mr-6';
-    list.appendChild(count);
-
-    const reactions = document.createElement('div');
-
-    webmentions.forEach(like => {
-        reactions.appendChild(renderLike(like));
     });
-
-    list.appendChild(reactions);
-
-    return list;
 }
 
-function renderLike(webmention) {
-    const rendered = document.importNode(
-        document.getElementById("webmention-like-template").content,
-        true
-    );
+function renderWebmentions(webmentions) {
+    outerContainer.classList.remove('hidden');
 
-    function set(selector, attribute, value) {
-        rendered.querySelector(selector)[attribute] = value;
-    }
+    webmentions.forEach(item => {
+        wmContainer.append(buildItem(item));
+    });
+}
 
-    set("[data-author]", "href", webmention.author.url);
-    set("[data-author-avatar]", "src", webmention.author.photo);
-    set("[data-author-avatar]", "alt", `Photo of ${webmention.author.name}`);
+function buildItem(item) {
+    const tmpl = document.importNode(document.getElementById('wm-template').content, true);
+    tmpl.querySelector('[data-wm-author-img]').src = item.author.photo;
+    tmpl.querySelector('[data-wm-author-img]').alt = item.author.name;
+    tmpl.querySelector('[data-wm-author-name').innerHTML = item.author.name;
 
-    return rendered;
+    tmpl.querySelector('[data-wm-meta-label]').href = item.url;
+    tmpl.querySelector('[data-wm-meta-label]').innerHTML = (item['wm-property'] == 'like-of' ? 'liked' : 'retweeted');
+    tmpl.querySelector('[data-wm-meta-date]').innerHTML = ' on ' + dayjs(item['wm-received']).format('MMMM DD, YYYY');
+
+    return tmpl;
 }
