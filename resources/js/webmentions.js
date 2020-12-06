@@ -1,9 +1,11 @@
 const dayjs = require("dayjs");
 
 const wmContainer = document.querySelector("[data-webmentions]");
-const outerContainer = wmContainer.parentElement;
+const outerContainer = null;
 
 if (wmContainer) {
+    this.outerContainer = wmContainer.parentElement;
+
     fetch(`https://webmention.io/api/mentions.jf2?target=${wmContainer.dataset.webmentions}`)
         .then(response => {
             response.json().then(data => {
