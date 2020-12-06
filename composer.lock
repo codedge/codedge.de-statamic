@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f790e0b8a99fc0fc36e3c2b5ca80c75",
+    "content-hash": "68419e3791ece74e5649e9216ff90ec1",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4117,6 +4117,48 @@
                 "source": "https://github.com/spatie/robots-txt/tree/1.0.9"
             },
             "time": "2020-11-27T11:00:03+00:00"
+        },
+        {
+            "name": "spatie/statamic-responsive-images",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/statamic-responsive-images.git",
+                "reference": "45e4765858b5fce43571aad8a4210c97622af2d6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/statamic-responsive-images/zipball/45e4765858b5fce43571aad8a4210c97622af2d6",
+                "reference": "45e4765858b5fce43571aad8a4210c97622af2d6",
+                "shasum": ""
+            },
+            "type": "statamic-addon",
+            "extra": {
+                "statamic": {
+                    "name": "Responsive Images",
+                    "description": "Responsive Images for Statamic 3"
+                },
+                "laravel": {
+                    "providers": [
+                        "Spatie\\ResponsiveImages\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\ResponsiveImages\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Responsive Images for Statamic 3",
+            "support": {
+                "issues": "https://github.com/spatie/statamic-responsive-images/issues",
+                "source": "https://github.com/spatie/statamic-responsive-images/tree/v1.4.0"
+            },
+            "time": "2020-11-17T10:23:36+00:00"
         },
         {
             "name": "spatie/temporary-directory",
@@ -9970,7 +10012,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.3"
+        "php": "^7.4"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"

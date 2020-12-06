@@ -4,16 +4,18 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": "^7.3",
+        "php": "^7.4",
         "cnj/seotamic": "^2.0",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "intervention/image": "^2.5",
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
         "rias/statamic-markdown-highlight": "^1.0",
         "spatie/laravel-sitemap": "^5.8",
-        "statamic/cms": "3.0.*",
+        "spatie/statamic-responsive-images": "^1.4",
+        "statamic/cms": "^3.0",
         "statamic/ssg": "^0.2.0"
     },
     "require-dev": {
