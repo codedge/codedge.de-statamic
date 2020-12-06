@@ -1,23 +1,22 @@
 const dayjs = require("dayjs");
 
 const wmContainer = document.querySelector("[data-webmentions]");
-const outerContainer = null;
 
 if (wmContainer) {
-    this.outerContainer = wmContainer.parentElement;
+    const container = wmContainer.parentElement;
 
     fetch(`https://webmention.io/api/mentions.jf2?target=${wmContainer.dataset.webmentions}`)
         .then(response => {
             response.json().then(data => {
                 if (data.children.length > 0) {
-                    renderWebmentions(data.children);
+                    renderWebmentions(container, data.children);
                 }
             });
     });
 }
 
-function renderWebmentions(webmentions) {
-    outerContainer.classList.remove('hidden');
+function renderWebmentions(container, webmentions) {
+    container.classList.remove('hidden');
 
     webmentions.forEach(item => {
         wmContainer.append(buildItem(item));
