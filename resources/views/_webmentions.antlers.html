@@ -1,6 +1,6 @@
 <div class="mx-auto mt-12 hidden lg:tracking-wide text-lg">
     <h3 class="text-3xl text-center">Webmentions</h3>
-    <div class="mt-4" data-webmentions="{{ current_full_url }}"></div>
+    <div class="mt-4" data-webmentions="{{ if webmention_url != "" }} {{ webmention_url }} {{ else }} {{ current_full_url }} {{ endif }}"></div>
     <template id="wm-template">
         <div class="mt-4">
             <div data-wm-author class="inline-block">

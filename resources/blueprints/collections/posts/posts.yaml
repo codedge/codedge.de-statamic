@@ -168,6 +168,15 @@ sections:
           type: taggable
           icon: tags
           listable: hidden
+      -
+        handle: webmention_url
+        field:
+          input_type: text
+          antlers: false
+          display: 'Webmention URL'
+          type: text
+          icon: text
+          listable: hidden
   SEO:
     display: SEO
     fields:
