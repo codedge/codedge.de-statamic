@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::statamic('not-found', 'errors/404');
+
 Route::statamic('feed', 'layouts/feed', [
     'layout' => 'layouts/feed',
     'content_type' => 'atom'

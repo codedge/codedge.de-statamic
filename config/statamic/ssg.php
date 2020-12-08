@@ -64,6 +64,7 @@ return [
     */
 
     'urls' => [
+        "/not-found",
         "/feed"
     ],
 
