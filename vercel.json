@@ -22,7 +22,7 @@
         ]
       },
       {
-        "source": "css/site.css",
+        "source": "css/tailwind.css",
         "headers": [
           {
             "key": "Cache-Control",
