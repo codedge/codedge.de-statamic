@@ -46,6 +46,7 @@ return [
         public_path('favicon.ico') => 'favicon.ico',
         public_path('manifest.json') => 'manifest.json',
         public_path('sw.js') => 'sw.js',
+        public_path('404.html') => '404.html',
     ],
 
     'symlinks' => [
@@ -64,7 +65,6 @@ return [
     */
 
     'urls' => [
-        "/not-found",
         "/feed"
     ],
 

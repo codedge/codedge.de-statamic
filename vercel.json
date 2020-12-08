@@ -2,10 +2,6 @@
     "github": {
         "silent": true
     },
-    "routes": [
-      { "handle": "filesystem" },
-      { "src": "/(.*)", "status": 404, "dest": "/not-found" }
-    ],
     "headers": [
       {
         "source": "/feed",
