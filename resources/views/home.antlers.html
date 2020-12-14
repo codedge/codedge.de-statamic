@@ -7,16 +7,16 @@
         Hey, I'm Holger Lösken - a full-stack web application developer from Germany with over 15 years professional experience.
     </div>
 
-    <div class="grid grid-cols-2 gap-4 mt-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-10">
         <div>
             <h2 class="uppercase font-semibold text-gray-900 mt-8 mb-4 w-auto border-b border-gray-400">
                 Recent posts
             </h2>
             <ul>
             {{ collection:posts limit="5" sort="date:desc" }}
-                <li class="flex py-1">
-                    <span class="hidden lg:inline-block w-32 text-gray-700 mr-2 lg:mr-4 text-xs lg:text-sm">{{ date format="Y-m-d" }}</span>
-                    <a class="inline-block text-gray-900 text-sm lg:text-base" href="/posts/{{ slug }}">
+                <li class="flex py-2">
+                    <span class="hidden lg:inline-block w-32 text-gray-700 mr-2 lg:mr-4 text-xs lg:text-base">{{ date format="Y-m-d" }}</span>
+                    <a class="inline-block text-gray-900 text-sm lg:text-lg" href="/posts/{{ slug }}">
                         {{ title }}
                     </a>
                 </li>
