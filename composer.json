@@ -1,8 +1,8 @@
 {
     "name": "statamic/statamic",
+    "type": "project",
     "description": "Statamic",
     "license": "MIT",
-    "type": "project",
     "require": {
         "php": "^8.0",
         "cnj/seotamic": "^2.0",
