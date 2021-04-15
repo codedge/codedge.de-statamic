@@ -1,7 +1,7 @@
 {
-    "name": "statamic/statamic",
+    "name": "codedge/codedge.de-statamic",
     "type": "project",
-    "description": "Statamic",
+    "description": "My blog",
     "license": "MIT",
     "require": {
         "php": "^8.0",
@@ -15,8 +15,8 @@
         "rias/statamic-markdown-highlight": "^1.0",
         "spatie/laravel-sitemap": "^5.8",
         "spatie/statamic-responsive-images": "^1.4",
-        "statamic/cms": "^3.0",
-        "statamic/ssg": "^0.2.0"
+        "statamic/cms": "^3.1",
+        "statamic/ssg": "^0.4"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",
@@ -51,6 +51,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
+        "pre-update-cmd": [
+            "Statamic\\Console\\Composer\\Scripts::preUpdateCmd"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi",
