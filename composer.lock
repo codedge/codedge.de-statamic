@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53bf4de6c5e7b2f6b337700e06bbd2fa",
+    "content-hash": "0304e5c18b0390b64bfde29c90e85aa5",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4191,20 +4191,26 @@
         },
         {
             "name": "spatie/statamic-responsive-images",
-            "version": "v1.8.0",
+            "version": "v2.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/statamic-responsive-images.git",
-                "reference": "c69e16d9e9f6282babe2984ab82d2f88bbfb52ba"
+                "reference": "9fe713544dbd6a2460638f2674c1de4892d4fc79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/statamic-responsive-images/zipball/c69e16d9e9f6282babe2984ab82d2f88bbfb52ba",
-                "reference": "c69e16d9e9f6282babe2984ab82d2f88bbfb52ba",
+                "url": "https://api.github.com/repos/spatie/statamic-responsive-images/zipball/9fe713544dbd6a2460638f2674c1de4892d4fc79",
+                "reference": "9fe713544dbd6a2460638f2674c1de4892d4fc79",
                 "shasum": ""
             },
             "require": {
                 "statamic/cms": "^3.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.9",
+                "phpunit/phpunit": "^9.5",
+                "spatie/laravel-ray": "^1.10",
+                "spatie/phpunit-snapshot-assertions": "^4.2"
             },
             "type": "statamic-addon",
             "extra": {
@@ -4230,9 +4236,9 @@
             "description": "Responsive Images for Statamic 3",
             "support": {
                 "issues": "https://github.com/spatie/statamic-responsive-images/issues",
-                "source": "https://github.com/spatie/statamic-responsive-images/tree/v1.8.0"
+                "source": "https://github.com/spatie/statamic-responsive-images/tree/v2.5.3"
             },
-            "time": "2021-01-13T13:37:18+00:00"
+            "time": "2021-03-17T12:27:14+00:00"
         },
         {
             "name": "spatie/temporary-directory",
