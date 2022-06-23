@@ -12,17 +12,17 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-              primary: {
-                200: "#ff9d7d",
-                400: "#ff6633",
-              },
-              secondary: {
-                400: "#01262e"
-              }
-
+                "pastel": "#f9faf4",
+                primary: {
+                    200: "#ff9d7d",
+                    400: "#ff6633",
+                },
+                secondary: {
+                    400: "#01262e"
+                }
             },
             fontFamily: {
-              sans: ["Rubik", ...defaultTheme.fontFamily.sans]
+                sans: ["Rubik", ...defaultTheme.fontFamily.sans]
             },
             typography: {
                 DEFAULT: {
