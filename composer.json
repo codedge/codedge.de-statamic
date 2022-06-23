@@ -12,7 +12,7 @@
         "intervention/image": "^2.5",
         "laravel/framework": "^8.80",
         "laravel/tinker": "^2.0",
-        "rias/statamic-markdown-highlight": "^1.0",
+        "rias/statamic-markdown-highlight": "^2.0",
         "spatie/laravel-sitemap": "^5.8",
         "spatie/statamic-responsive-images": "^2.0",
         "statamic/cms": "3.2.*",
