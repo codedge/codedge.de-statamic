@@ -1,3 +1,7 @@
+pre code {
+    padding: 3rem !important;
+}
+
 a:not(.no-shadow) {
     transition: box-shadow 150ms;
     box-shadow: 0 -2px 0 0 #ff9d7d inset;

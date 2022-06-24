@@ -27,16 +27,6 @@ module.exports = {
             typography: {
                 DEFAULT: {
                     css: {
-                        code: {
-                            color: '#ff9d7d',
-                            fontWeight: 'normal',
-                            '&:before': {
-                                display: 'none',
-                            },
-                            '&:after': {
-                                display: 'none',
-                            }
-                        },
                         a: {
                             color: '#4a5568',
                             'text-decoration': 'none',
